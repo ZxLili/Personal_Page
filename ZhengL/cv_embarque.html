@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CV - Lili ZHENG - Cloud & CI/CD</title>
+    <title>CV - Lili ZHENG - Systèmes Temps Réel & Embarqués</title>
     <style>
         * {
             margin: 0;
@@ -175,6 +175,15 @@
             margin-top: 6px;
         }
 
+        ul {
+            margin-left: 18px;
+            color: #4a5568;
+        }
+
+        ul li {
+            margin-bottom: 4px;
+        }
+
         /* --- TABLES --- */
         .cours-table {
             font-size: 0.85em;
@@ -226,7 +235,7 @@
                     <p class="stage-info">Stage de fin d'étude : 6 mois à partir du 01/03/2026</p>
                 </div>
                 <div class="header-right">
-                    <p class="subtitle">Stage Ingénieure Cloud & CI/CD</p>
+                    <p class="subtitle">Stage Systèmes Temps Réel & Embarqués</p>
                 </div>
             </div>
         </header>
@@ -246,24 +255,24 @@
                 <section class="section">
                     <h2 class="section-title">Compétences</h2>
                     <div class="skills-block">
-                        <strong>Cloud & Infrastructure :</strong>
-                        <p>AWS (EC2, S3, IAM, VPC), Docker, Kubernetes, CI/CD, Terraform</p>
+                        <strong>Système embarqué :</strong>
+                        <p>MIPS, ARM, VHDL, Raspberry Pi, Vivado, GTKwave, JTAG, System V</p>
                     </div>
                     <div class="skills-block">
-                        <strong>Système & Répartie :</strong>
-                        <p>Bash, C, C++, MPI, TCP/IP, Wireshark, Flex & Bison</p>
+                        <strong>FPGA & Matériel :</strong>
+                        <p>VHDL, Vivado, FPGA (Digilent Basys), conception circuits numériques (VLSI)</p>
                     </div>
                     <div class="skills-block">
-                        <strong>DevOps & Outils :</strong>
-                        <p>Git/GitHub, Jenkins, GitHub Actions, VsCode, vim, Scrum</p>
+                        <strong>Temps Réel & Sûreté :</strong>
+                        <p>Lustre, Promela, Spin, NuSMV, Imitator, LTL/CTL, systèmes critiques</p>
                     </div>
                     <div class="skills-block">
-                        <strong>Sûreté & Fiabilité :</strong>
-                        <p>Lustre, Promela, Spin, NuSMV, Imitator (Model Checker) LTL/CTL</p>
+                        <strong>Programmation Bas Niveau :</strong>
+                        <p>C, C++, Assembleur (ARM, MIPS), Noyau Linux, rootkit</p>
                     </div>
                     <div class="skills-block">
-                        <strong>Langages :</strong>
-                        <p>Python, Java, C, C++, Bash</p>
+                        <strong>Outils & Méthodologie :</strong>
+                        <p>Git/GitHub, VsCode, vim, Scrum, Gurobi (optimisation)</p>
                     </div>
                 </section>
 
@@ -293,16 +302,16 @@
                             <p style="margin-top: 5px;"><strong>Cours clés :</strong></p>
                             <table class="cours-table" style="margin-top: 3px;">
                                 <tr>
+                                    <td>• Introduction aux FPGAs</td>
+                                    <td>• VLSI (Circuits numériques)</td>
+                                </tr>
+                                <tr>
+                                    <td>• Architecture ManyCore</td>
+                                    <td>• Sécurité, fiabilité et temps réel</td>
+                                </tr>
+                                <tr>
                                     <td>• Noyau Multi-Cœur et Virtualisation</td>
                                     <td>• Programmation Système Répartie</td>
-                                </tr>
-                                <tr>
-                                    <td>• Sécurité, fiabilité et temps réel</td>
-                                    <td>• Algorithmique répartie résistant aux fautes</td>
-                                </tr>
-                                <tr>
-                                    <td>• Parallélisation pour cluster</td>
-                                    <td>• Architecture Multiprocesseurs</td>
                                 </tr>
                             </table>
                         </div>
@@ -325,8 +334,32 @@
                     <h2 class="section-title">Projets Académiques</h2>
                     
                     <div class="experience-item">
+                        <h3>Contrôleur IP d'une maquette de trains</h3>
+                        <p class="date">2025 (4 mois)</p>
+                        <div class="description">
+                            <ul>
+                                <li>Conception et écriture d'IPs sur carte FPGA (Digilent Basys)</li>
+                                <li>Gestion de signaux temps réel et contrôle de périphériques</li>
+                                <li>Technologies : VHDL, Vivado, systèmes embarqués</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="experience-item">
+                        <h3>Processeur RISC à 5 étages</h3>
+                        <!-- <p class="date">2024 (3 mois)</p> -->
+                        <div class="description">
+                            <ul>
+                                <li>Reverse Engineering et implémentation complète d'un processeur RISC</li>
+                                <li>Pipeline à 5 étages avec gestion des aléas</li>
+                                <li>Technologies : VHDL, modélisation et simulation GTKwave</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="experience-item">
                         <h3>Ajout d'un système de fichier optimisé dans Linux</h3>
-                        <p class="date">2025 (1 mois)</p>
+                        <!-- <p class="date">2025 (1 mois)</p> -->
                         <div class="description">
                             <ul>
                                 <li>File System optimisé pour les petits fichiers dans le noyau Linux</li>
@@ -337,35 +370,13 @@
                     </div>
 
                     <div class="experience-item">
-                        <h3>Implémentation de Chord (DHT)</h3>
-                        <p class="date">2025 (1 mois)</p>
+                        <h3>Shell et système de fichiers</h3>
+                        <!-- <p class="date">2025 (4 mois)</p> -->
                         <div class="description">
                             <ul>
-                                <li>Protocole Chord pour réseau pair-à-pair distribué</li>
-                                <li>Table de hachage distribuée avec recherche en O(log N), tolérance aux pannes</li>
-                                <li>Technologies : MPI, systèmes distribués, C</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="experience-item">
-                        <h3>Contrôleur IP d'une maquette de trains</h3>
-                        <p class="date">2025 (4 mois)</p>
-                        <div class="description">
-                            <ul>
-                                <li>Écriture d'IPs sur carte FPGA (Digilent Basys)</li>
-                                <li>Technologies : VHDL, Vivado, systèmes embarqués</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="experience-item">
-                        <h3>Processeur RISC à 5 étages</h3>
-                        <p class="date">2024 (3 mois)</p>
-                        <div class="description">
-                            <ul>
-                                <li>Reverse Engineering et implémentation d'un processeur RISC</li>
-                                <li>Technologies : VHDL, pipeline, modélisation GTKwave</li>
+                                <li>Développement pour système d'exploitation éducatif</li>
+                                <li>Implémentation d'un shell et gestion du file system</li>
+                                <li>Technologies : Flex, Bison, construction de noyau, C</li>
                             </ul>
                         </div>
                     </div>
