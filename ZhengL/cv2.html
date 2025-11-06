@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - Lili ZHENG - Cloud & CI/CD</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+            line-height: 1.4;
+            font-size: 13px;
+        }
+        
+        .cv-container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        /* --- HEADER --- */
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 25px 30px 20px 30px;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            text-align: left;
+        }
+
+        .header-left h1 {
+            font-size: 2em;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .header-right .subtitle {
+            font-size: 1.2em;
+            font-weight: 600;
+            background: rgba(255,255,255,0.2);
+            padding: 8px 15px;
+            border-radius: 5px;
+            display: inline-block;
+        }
+
+        .header .stage-info {
+            font-size: 0.9em;
+            opacity: 0.95;
+            font-style: italic;
+            margin-top: 8px;
+        }
+
+        /* --- LAYOUT --- */
+        .main-content {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 0;
+        }
+        
+        .sidebar {
+            background: #f8f9fa;
+            padding: 25px 20px;
+            border-right: 3px solid #667eea;
+        }
+        
+        .content {
+            padding: 25px;
+        }
+
+        /* --- SECTIONS --- */
+        .section {
+            margin-bottom: 20px;
+        }
+        
+        .section-title {
+            font-size: 1.2em;
+            color: #667eea;
+            margin-bottom: 12px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #667eea;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .sidebar .section-title {
+            font-size: 1em;
+        }
+
+        /* --- CONTACT --- */
+        .sidebar .info-item {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            margin-bottom: 8px;
+            font-size: 0.9em;
+            color: #4a5568;
+            word-break: break-word;
+        }
+
+        /* --- COMPÉTENCES EN BLOCS --- */
+        .skills-block {
+            margin-bottom: 10px;
+            font-size: 0.9em;
+            color: #4a5568;
+        }
+
+        .skills-block strong {
+            color: #2d3748;
+            display: block;
+            margin-bottom: 4px;
+        }
+
+        .skills-block p {
+            margin-left: 8px;
+            line-height: 1.3;
+        }
+
+        /* --- EXPERIENCE --- */
+        .experience-item, .education-item {
+            margin-bottom: 16px;
+            padding-left: 15px;
+            border-left: 3px solid #e9ecef;
+            position: relative;
+        }
+        
+        .experience-item::before, .education-item::before {
+            content: '';
+            position: absolute;
+            left: -7px;
+            top: 5px;
+            width: 11px;
+            height: 11px;
+            background: #667eea;
+            border-radius: 50%;
+        }
+        
+        .experience-item h3, .education-item h3 {
+            color: #2d3748;
+            font-size: 1.05em;
+            margin-bottom: 3px;
+        }
+        
+        .date {
+            color: #718096;
+            font-style: italic;
+            font-size: 0.85em;
+            margin-bottom: 5px;
+        }
+        
+        .company {
+            color: #667eea;
+            font-weight: 600;
+            margin-bottom: 5px;
+            font-size: 0.95em;
+        }
+        
+        .description {
+            color: #4a5568;
+            margin-top: 6px;
+        }
+
+        /* --- TABLES --- */
+        .cours-table {
+            font-size: 0.85em;
+            line-height: 1.3;
+            color: #4a5568;
+        }
+
+        .cours-table td {
+            padding: 2px 5px 2px 0;
+        }
+
+        /* --- MEDIA --- */
+        @media (max-width: 768px) {
+            .main-content {
+                grid-template-columns: 1fr;
+            }
+            .header-content {
+                flex-direction: column;
+                align-items: flex-start;
+                text-align: left;
+            }
+            .sidebar {
+                border-right: none;
+                border-bottom: 3px solid #667eea;
+            }
+            .header-left h1 {
+                font-size: 1.5em;
+            }
+        }
+
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            .cv-container {
+                box-shadow: none;
+                border-radius: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="cv-container">
+        <header class="header">
+            <div class="header-content">
+                <div class="header-left">
+                    <h1>Lili ZHENG</h1>
+                    <p class="stage-info">Stage de fin d'étude : 6 mois à partir du 01/03/2026</p>
+                </div>
+                <div class="header-right">
+                    <p class="subtitle">Stage Ingénieure Cloud & CI/CD</p>
+                </div>
+            </div>
+        </header>
+
+        <div class="main-content">
+            <aside class="sidebar">
+                <section class="section">
+                    <h2 class="section-title">Contact</h2>
+                    <div class="info-item">📧 zhengxulili@gmail.com</div>
+                    <div class="info-item">📱 06 99 83 06 88</div>
+                    <div class="info-item">📍 Aubervilliers</div>
+                    <div class="info-item">🔗 linkedin.com/in/lili-zheng01</div>
+                    <div class="info-item">🔗 github.com/Zx-Lili</div>
+                    <div class="info-item">🇫🇷 Nationalité Française</div>
+                </section>
+
+                <section class="section">
+                    <h2 class="section-title">Compétences</h2>
+                    <div class="skills-block">
+                        <strong>Cloud & Infrastructure :</strong>
+                        <p>AWS (EC2, S3, IAM, VPC), Docker, Kubernetes, CI/CD, Terraform</p>
+                    </div>
+                    <div class="skills-block">
+                        <strong>Système & Répartie :</strong>
+                        <p>Bash, C, C++, MPI, TCP/IP, Wireshark, Flex & Bison</p>
+                    </div>
+                    <div class="skills-block">
+                        <strong>DevOps & Outils :</strong>
+                        <p>Git/GitHub, Jenkins, GitHub Actions, VsCode, vim, Scrum</p>
+                    </div>
+                    <div class="skills-block">
+                        <strong>Sûreté & Fiabilité :</strong>
+                        <p>Lustre, Promela, Spin, NuSMV, Imitator (Model Checker) LTL/CTL</p>
+                    </div>
+                    <div class="skills-block">
+                        <strong>Langages :</strong>
+                        <p>Python, Java, C, C++, Bash</p>
+                    </div>
+                </section>
+
+                <section class="section">
+                    <h2 class="section-title">Langues</h2>
+                    <div class="info-item"><strong>Français</strong>Maternelle</div>
+                    <div class="info-item"><strong>Anglais</strong>B2</div>
+                    <div class="info-item"><strong>Chinois</strong>A2</div>
+                </section>
+
+                <section class="section">
+                    <h2 class="section-title">Loisirs</h2>
+                    <div class="info-item">Musculation, films d'animation, atelier éloquence, modélisation et formalisation</div>
+                </section>
+            </aside>
+
+            <main class="content">
+                <section class="section">
+                    <h2 class="section-title">Formations</h2>
+                    
+                    <div class="education-item">
+                        <h3>Master Informatique</h3>
+                        <p class="company">Sorbonne Université Sciences, Paris</p>
+                        <p class="date">2024 - 2026</p>
+                        <div class="description">
+                            <p><em>Parcours Systèmes et Applications Répartis</em></p>
+                            <p style="margin-top: 5px;"><strong>Cours clés :</strong></p>
+                            <table class="cours-table" style="margin-top: 3px;">
+                                <tr>
+                                    <td>• Noyau Multi-Cœur et Virtualisation</td>
+                                    <td>• Programmation Système Répartie</td>
+                                </tr>
+                                <tr>
+                                    <td>• Sécurité, fiabilité et temps réel</td>
+                                    <td>• Algorithmique répartie résistant aux fautes</td>
+                                </tr>
+                                <tr>
+                                    <td>• Parallélisation pour cluster</td>
+                                    <td>• Architecture Multiprocesseurs</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="education-item">
+                        <h3>Licence Informatique</h3>
+                        <p class="company">Sorbonne Université Sciences, Paris</p>
+                        <p class="date">2021 - 2024</p>
+                    </div>
+
+                    <div class="education-item">
+                        <h3>Prépa Grandes Écoles PCSI</h3>
+                        <p class="company">ENCPB, Paris</p>
+                        <p class="date">2020 - 2021</p>
+                    </div>
+                </section>
+
+                <section class="section">
+                    <h2 class="section-title">Projets Académiques</h2>
+                    
+                    <div class="experience-item">
+                        <h3>Ajout d'un système de fichier optimisé dans Linux</h3>
+                        <p class="date">2025 (1 mois)</p>
+                        <div class="description">
+                            <ul>
+                                <li>File System optimisé pour les petits fichiers dans le noyau Linux</li>
+                                <li>Modules kernel, VFS, Page Cache, system calls, mesure d'efficacité</li>
+                                <li>Technologies : Noyau Linux, débogueur Kernel, C</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="experience-item">
+                        <h3>Implémentation de Chord (DHT)</h3>
+                        <p class="date">2025 (1 mois)</p>
+                        <div class="description">
+                            <ul>
+                                <li>Protocole Chord pour réseau pair-à-pair distribué</li>
+                                <li>Table de hachage distribuée avec recherche en O(log N), tolérance aux pannes</li>
+                                <li>Technologies : MPI, systèmes distribués, C</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="experience-item">
+                        <h3>Contrôleur IP d'une maquette de trains</h3>
+                        <p class="date">2025 (4 mois)</p>
+                        <div class="description">
+                            <ul>
+                                <li>Écriture d'IPs sur carte FPGA (Digilent Basys)</li>
+                                <li>Technologies : VHDL, Vivado, systèmes embarqués</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="experience-item">
+                        <h3>Processeur RISC à 5 étages</h3>
+                        <p class="date">2024 (3 mois)</p>
+                        <div class="description">
+                            <ul>
+                                <li>Reverse Engineering et implémentation d'un processeur RISC</li>
+                                <li>Technologies : VHDL, pipeline, modélisation GTKwave</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+</body>
+</html>
