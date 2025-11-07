@@ -21,3 +21,4 @@ TODO
 ## CV 
 
 - [DevOps and Cloud](LinE/cv_devops_cloud.html) ([pdf version](LinE/cv_devops_cloud.pdf)) ([latex version](LinE/cv_devops_cloud_latex.pdf))
+- [Réseaux et Télécom](LinE/cv_reseaux_telecom.html) ([pdf version](LinE/cv_reseaux_telecom.pdf))
