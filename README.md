@@ -20,4 +20,4 @@ TODO
 
 ## CV 
 
-- [DevOps and Cloud](LinE/cv_devops_cloud.html) ([pdf version](LinE/cv_devops_cloud.pdf))
+- [DevOps and Cloud](LinE/cv_devops_cloud.html) ([pdf version](LinE/cv_devops_cloud.pdf)) ([latex version](LinE/cv_devops_cloud_latex.pdf))
