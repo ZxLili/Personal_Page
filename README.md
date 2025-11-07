@@ -16,4 +16,8 @@ TODO
 
 ---
 
-- [Hello](LinE/Hello.html)
+# Emilie's Profil
+
+## CV 
+
+- [DevOps and Cloud](LinE/cv_devops_cloud.html) ([pdf version](LinE/cv_devops_cloud.pdf))

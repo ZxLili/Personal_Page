@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - Emilie LIN - Cloud & DevOps</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 10px;
+            line-height: 1.3;
+            font-size: 14px; 
+        }
+        
+        .cv-container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        /* --- HEADER --- */
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 25px 30px 20px 30px;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            text-align: left;
+        }
+
+        .header-left h1 {
+            font-size: 2em;
+            margin-bottom: 5px;
+            /* text-transform: uppercase; */
+            letter-spacing: 2px;
+        }
+        
+        /* === AJOUTÉ : Aligner le bloc de droite à droite === */
+        .header-right {
+            text-align: right;
+        }
+
+        .header-right .subtitle {
+            font-size: 1.5em;
+            font-weight: 600;
+            background: rgba(255,255,255,0.2);
+            padding: 8px 15px;
+            border-radius: 5px;
+            display: inline-block;
+        }
+
+        .header .stage-info {
+            font-size: 1em; /* Gardé à 1em pour la lisibilité */
+            opacity: 0.95;
+            font-style: italic;
+            margin-top: 8px;
+        }
+
+        /* --- LAYOUT --- */
+        .main-content {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 0;
+        }
+        
+        .sidebar {
+            background: #f8f9fa;
+            padding: 25px 20px;
+            border-right: 3px solid #667eea;
+        }
+        
+        .content {
+            padding: 25px;
+        }
+
+        /* --- SECTIONS --- */
+        .section {
+            margin-bottom: 20px;
+        }
+        
+        .section-title {
+            font-size: 1.2em;
+            color: #667eea;
+            margin-bottom: 12px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #667eea;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .sidebar .section-title {
+            font-size: 1em;
+        }
+
+        /* --- CONTACT --- */
+        .sidebar .info-item {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            margin-bottom: 8px;
+            font-size: 0.9em;
+            color: #4a5568;
+            word-break: break-word;
+        }
+
+        /* --- COMPÉTENCES EN BLOCS --- */
+        .skills-block {
+            margin-bottom: 10px;
+            font-size: 0.9em;
+            color: #4a5568;
+        }
+
+        .skills-block strong {
+            color: #2d3748;
+            display: block;
+            margin-bottom: 4px;
+        }
+
+        .skills-block p {
+            margin-left: 8px;
+            line-height: 1.3;
+        }
+
+        /* --- EXPERIENCE --- */
+        .experience-item, .education-item {
+            margin-bottom: 16px;
+            padding-left: 15px;
+            border-left: 3px solid #e9ecef;
+            position: relative;
+        }
+        
+        .experience-item::before, .education-item::before {
+            content: '';
+            position: absolute;
+            left: -7px;
+            top: 5px;
+            width: 11px;
+            height: 11px;
+            background: #667eea;
+            border-radius: 50%;
+        }
+        
+        .experience-item h3, .education-item h3 {
+            color: #2d3748;
+            font-size: 1.05em;
+            margin-bottom: 3px;
+        }
+        
+        .date {
+            color: #718096;
+            font-style: italic;
+            font-size: 0.85em;
+            margin-bottom: 5px;
+        }
+        
+        .company {
+            color: #667eea;
+            font-weight: 600;
+            margin-bottom: 5px;
+            font-size: 0.95em;
+        }
+        
+        .description {
+            color: #4a5568;
+            margin-top: 6px;
+        }
+
+        ul {
+            margin-left: 18px;
+            color: #4a5568;
+        }
+
+        ul li {
+            margin-bottom: 4px;
+        }
+
+        /* --- TABLES --- */
+        .cours-table {
+            font-size: 1em;
+            line-height: 1.3;
+            color: #4a5568;
+        }
+
+        .cours-table td {
+            padding: 2px 5px 2px 0;
+        }
+
+        /* --- MEDIA --- */
+        @media (max-width: 768px) {
+            .main-content {
+                grid-template-columns: 1fr;
+            }
+            .header-content {
+                flex-direction: column;
+                align-items: flex-start;
+                text-align: left;
+            }
+            .sidebar {
+                border-right: none;
+                border-bottom: 3px solid #667eea;
+            }
+            .header-left h1 {
+                font-size: 1.5em;
+            }
+            /* On ré-aligne à gauche sur mobile */
+            .header-right {
+                text-align: left;
+            }
+        }
+
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            .cv-container {
+                box-shadow: none;
+                border-radius: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="cv-container">
+        <header class="header">
+            <div class="header-content">
+                <div class="header-left">
+                    <h1>Emilie LIN</h1>
+                    </div>
+                <div class="header-right">
+                    <p class="subtitle">Stage de fin d'études en cloud et DevOps</p>
+                    <p class="stage-info">Durée : 5 à 6 mois à partir du 16/02/2026</p>
+                </div>
+            </div>
+        </header>
+
+        <div class="main-content">
+            <aside class="sidebar">
+                <section class="section">
+                    <h2 class="section-title">Contact</h2>
+                    <div class="info-item">📧 emilie.lin123@gmail.com</div>
+                    <div class="info-item">📱 07 53 44 18 86</div>
+                    <div class="info-item">📍 Bonneuil-en-France</div>
+                    <div class="info-item">💼 linkedin.com/in/emilielin123</div>
+                    <div class="info-item">💻 github.com/DHinode</div>
+                    <div class="info-item">🇫🇷 Nationalité Française</div>
+                </section>
+
+                <section class="section">
+                    <h2 class="section-title">Compétences</h2>
+                    <div class="skills-block">
+                        <strong>Réseaux :</strong>
+                        <p>Stack TCP/IP, QoS, routage (OSPF, BGP), MPLS, SDN/NFV, mobilité, réseaux cellulaires et sans fil, P2P (Chord, CAN)</p>
+                    </div>
+                    <div class="skills-block">
+                        <strong>Cloud & Infrastructure :</strong>
+                        <p>AWS (EC2, S3, IAM, VPC), Docker, Kubernetes, OpenStack, Terraform</p>
+                    </div>
+                    <div class="skills-block">
+                        <strong>CI/CD & DevOps :</strong>
+                        <p>GitHub Actions, Jenkins, Bash scripting, YAML, Prometheus/Grafana, Agile/Scrum</p>
+                    </div>
+                    <div class="skills-block">
+                        <strong>Blockchain :</strong>
+                        <p>Ethereum, Remix, Solidity, Web3.py, testnets (Ethereum, Fantom, Sonic Blaze), interactions D2D sécurisées</p>
+                    </div>
+                    <div class="skills-block">
+                        <strong>Programmation :</strong>
+                        <p>Python, C/C++, Java, Solidity, SQL, Bash</p>
+                    </div>
+                    <div class="skills-block">
+                        <strong>Outils :</strong>
+                        <p>Git/GitHub, LaTeX, VSCode, NeoVim, Wireshark</p>
+                    </div>
+                    <div class="skills-block">
+                        <strong>Soft skills :</strong>
+                        <p>Ponctualité, rigueur, adaptabilité, réactivité, esprit d'équipe, autonomie, discipline</p>
+                    </div>
+                </section>
+
+                <section class="section">
+                    <h2 class="section-title">Langues</h2>
+                    <div class="info-item"><strong>Français :</strong> Maternelle</div>
+                    <div class="info-item"><strong>Anglais :</strong> B2 - intermédiaire</div>
+                    <div class="info-item"><strong>Chinois :</strong> Notions de base</div>
+                </section>
+
+                <section class="section">
+                    <h2 class="section-title">Loisirs</h2>
+                    <div class="info-item">Renforcement musculaire</div>
+                    <div class="info-item">Films d'animation</div>
+                    <div class="info-item">Mangas</div>
+                    <div class="info-item">Atelier d'éloquence</div>
+                </section>
+            </aside>
+
+            <main class="content">
+                <section class="section">
+                    <h2 class="section-title">Formations</h2>
+                    
+                    <div class="education-item">
+                        <h3>Master Informatique</h3>
+                        <p class="company">Sorbonne Université Sciences, Paris</p>
+                        <p class="date">2024 - 2026</p>
+                        <div class="description">
+                            <p><em>Parcours Réseaux</em></p>
+                            <p style="margin-top: 5px;"><strong>Cours clés :</strong></p>
+                            <table class="cours-table" style="margin-top: 3px;">
+                                <tr>
+                                    <td>• Réseaux et télécommunications</td>
+                                    <td>• Cloud et virtualisation</td>
+                                </tr>
+                                <tr>
+                                    <td>• Architecture et algorithmique des réseaux</td>
+                                    <td>• Mobilité et sans fil</td>
+                                </tr>
+                                <tr>
+                                    <td>• Réseaux cellulaires</td>
+                                    <td>• Programmation réseau</td>
+                                </tr>
+                                <tr>
+                                    <td>• Systèmes répartis et client-serveur</td>
+                                    <td>• Ingénierie de trafic et QoS</td>
+                                </tr>
+                                <tr>
+                                    <td>• Modélisation et optimisation</td>
+                                    <td>• Automatisation</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="education-item">
+                        <h3>Licence Informatique</h3>
+                        <p class="company">Sorbonne Université Sciences, Paris</p>
+                        <p class="date">2021 - 2024</p>
+                        <div class="description">
+                            <p><strong>Cours clés :</strong> Sciences des données, algorithmique, structures de données, mathématiques discrètes, systèmes d'exploitation (Windows et Linux), bases de données, programmation, méthodologie Scrum, architecture des ordinateurs, introduction aux réseaux.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="section">
+                    <h2 class="section-title">Projets Académiques</h2>
+                    
+                    <div class="experience-item">
+                        <h3>AutoScaling, IaC et Observabilité</h3>
+                        <p class="date">2025</p>
+                        <div class="description">
+                            <ul>
+                                <li>Création d'une infrastructure scalable en Node.js, React et Redis, déployée sur Kubernetes avec des conteneurs Docker personnalisés</li>
+                                <li>Conception et utilisation de Dockerfile pour construire des images applicatives reproductibles</li>
+                                <li>Mise en place du monitoring avec Prometheus/Grafana et exécution de scénarios de charge</li>
+                                <li>Compétences acquises : conteneurisation, configuration YAML, scripts d'automatisation</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="experience-item">
+                        <h3>Mini-projet AWS Academy – Cloud Computing</h3>
+                        <p class="date">2025</p>
+                        <div class="description">
+                            <ul>
+                                <li>Réalisation de labs AWS : Cloud Foundations (6) et Cloud Operations (3)</li>
+                                <li>Gestion d'infrastructure cloud : EC2, S3, EBS, IAM, VPC, AutoScaling, Load Balancer, CloudWatch</li>
+                                <li>Compétences acquises : surveillance, gestion d'incidents, automatisation</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="experience-item">
+                        <h3>Déploiement sur le cloud automatisé</h3>
+                        <p class="date">2025</p>
+                        <div class="description">
+                            <ul>
+                                <li>Mise en place d'un pipeline Jenkins et automatisation du déploiement d'instances EC2, de buckets S3 et gestion des rôles IAM avec Terraform</li>
+                                <li>Liaison du build Jenkins à un webhook sur GitHub</li>
+                                <li>Utilisation d'un serveur HTTP Nginx</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="experience-item">
+                        <h3>Proxy TCP/HTTP en Python</h3>
+                        <p class="date">2024</p>
+                        <div class="description">
+                            <ul>
+                                <li>Implémentation d'un proxy TCP étendu au protocole HTTP et ajout de fonctionnalités : cache HTTP, logger des requêtes/réponses et censeur bloquant l'accès à certains sites interdits</li>
+                                <li>Gestion de plusieurs clients en simultané et proxy enchaîné</li>
+                                <li>Compétences acquises : maîtrise des sockets et traitement de flux de données</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+</body>
+</html>
