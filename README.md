@@ -1,3 +1,29 @@
+<style>
+  .en-tete {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 50px;
+    text-align: center;
+    border-radius: 10px;
+    color: white;
+    margin-bottom: 30px;
+  }
+  .en-tete h1 {
+    margin: 0;
+    font-size: 2.5em;
+  }
+  .en-tete p {
+    margin: 10px 0 0 0;
+    font-size: 1.1em;
+    opacity: 0.9;
+  }
+</style>
+
+<div class="en-tete">
+  <h1>Personal_Page</h1>
+  <p>Page personnel qui sert de description de notre parcours</p>
+</div>
+
+
 # Personal_Page
 Page personnel qui sert de description de notre parcours
 
